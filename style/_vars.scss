@@ -1,0 +1,54 @@
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Bold.woff2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Extrabold.woff2);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Light.woff2);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Medium.woff2);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy_c;
+    src: url(../fonts/gilroy/Gilroy-Semibold.woff2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+$colorWhite: #fff;
+$colorGrey: #cfcfcf;
+$colorGreen: #618967;
+$colorDarkGrey: #403C3B;
+$colorLightGray: #504B4A;
+$colorBlackGrey: #2E2B2C;
+$greenGradient: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+$greyGradient: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+$transparentGrey: rgba(80, 75, 74, 0.9);
+$tranparentBlack: linear-gradient(360deg, #211F20 0%, #44403F 100%);
+
+$fontFamily: gilroy_c, sans-serif;
