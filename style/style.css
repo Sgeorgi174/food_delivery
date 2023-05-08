@@ -244,11 +244,11 @@ body {
 .cold-dishes__content {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 }
 .cold-dishes__box {
-  grid-column: span 1;
+  grid-column: span 4;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   border-radius: 10px;
 }
@@ -299,7 +299,7 @@ body {
   line-height: 24px;
 }
 .cold-dishes__box-price::after {
-  content: "₽";
+  content: " ₽";
 }
 .cold-dishes__box-checkout {
   width: 137px;
@@ -381,6 +381,7 @@ body {
   background-image: url(../img/map.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .contacts__box {
   max-width: 526px;
@@ -514,4 +515,129 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #fff;
+}
+
+.modal__card {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal__card-close path {
+  transition: fill 0.3s;
+  pointer-events: none;
+}
+.modal__card-close:hover path {
+  fill: #c92424;
+}
+.modal__card_open {
+  visibility: visible;
+  opacity: 1;
+}
+.modal__card-outline {
+  width: 1101px;
+  height: 527px;
+  background: #2E2B2C;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.modal__card-outline-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.modal__card-img {
+  border-radius: 15px 0 0 15px;
+}
+.modal__card-box {
+  width: 1024px;
+  height: 450px;
+  background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 1px solid #403C3B;
+  display: flex;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  box-shadow: 15px 4px 18px 17px rgba(120, 201, 140, 0.2);
+}
+.modal__card-title {
+  margin-top: 38px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+.modal__card-text {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #cfcfcf;
+}
+.modal__card-weight {
+  margin-top: 113px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.modal__card-check {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.modal__card-btn {
+  width: 145px;
+  height: 50px;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-family: gilroy_c, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  color: #fff;
+}
+.modal__card-price {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+.modal__card-price::after {
+  content: " ₽";
+}
+.modal__card-nutrients {
+  margin-top: 30px;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.modal__card-values {
+  margin-top: 5px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }/*# sourceMappingURL=style.css.map */

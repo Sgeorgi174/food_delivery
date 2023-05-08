@@ -227,12 +227,12 @@ body {
     &__content {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         gap: 20px;
     }
 
     &__box {
-        grid-column: span 1;
+        grid-column: span 4;
         background: $greyGradient;
         border-radius: 10px;
 
@@ -288,7 +288,7 @@ body {
             font-size: 20px;
             line-height: 24px;
             &::after {
-                content: '\20BD';
+                content: ' \20BD';
             }
         }
 
@@ -384,6 +384,7 @@ body {
     background-image: url(../img/map.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     &__box {
         max-width: 526px;
@@ -545,3 +546,5 @@ body {
         
     }
 }
+
+@import 'product_card'
