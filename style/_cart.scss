@@ -1,0 +1,297 @@
+.cart {
+
+    &__nav {
+        display: block;
+        margin-top: 34px;
+        margin-left: 158px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorWhite;
+        &::before {
+            padding-right: 10px;
+            content: '<';
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        margin-left: 158px;
+        font-family: $fontFamily;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-transform: uppercase;
+        color: $colorWhite;
+        position: relative;
+        padding-left: 19px;
+        &::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-color: $colorGreen;
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+        margin-top: 71px;
+        background: $greyGradient;
+        border-radius: 10px;
+        max-width: 76vw;        
+        padding: 20px 40px 20px 20px;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &:not(:last-child)::after {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 3px;
+            background: $transparentGrey;
+            position: absolute;
+            bottom: -20px;
+            z-index: 3;
+
+
+        }
+
+        &-info {
+            max-width: 265px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: $colorTextGrey;
+        }
+
+        &-counter {
+            display: flex;
+            align-items: center;
+            column-gap: 13px;
+
+            &-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 27px;
+                height: 27px;
+                outline: none;
+                border: none;
+                background: $greenGradient;
+                border-radius: 15px;
+
+            }
+
+            &-number {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+
+        &-total {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            &::after {
+                content: ' \20BD';
+            }
+        }
+
+        &-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 27px;
+            height: 27px;
+            outline: none;
+            border: none;
+            background: $greenGradient;
+            border-radius: 15px;
+            transform: rotate(45deg);
+        }
+
+        
+    }
+}
+
+.additional {
+    margin-top: 40px;
+
+
+
+    &__title {
+        margin-left: 158px;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &__content {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &:not(:last-child)::after{
+            display: block;
+            content: '';
+            width: 3px;
+            height: 100%;
+            background: $transparentGrey;
+            right: -30px;
+            position: absolute;
+        }
+
+        &-title {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &-add {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 12px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: $colorTextGrey;
+        }
+
+        &-btn {
+            width: 18px;
+            height: 18px;
+            background: $greenGradient;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-total {
+            margin-top: 12px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            &::after {
+                content: ' \20BD';
+            }
+        }
+    }
+    
+}
+
+.total {
+    margin: 0 auto;
+    margin-top: 79px;
+    margin-bottom: 89px;
+    max-width: 53vw;
+    background: $greyGradient;
+    border-radius: 10px;
+    padding: 20px 27px 11px 38px;
+
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+
+        &-amount {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: $colorTextGrey;
+
+            &_sum {
+                padding-left: 5px;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 30px;
+                color: $colorWhite;
+                &::after {
+                    content: ' \20BD';
+                }
+            }
+        }
+
+        &-delivery {
+            margin-top: 5px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+
+            &_sum {
+                padding-left: 5px;
+                color: $colorGreen;
+                &::after {
+                    content: ' \20BD';
+                }
+            }
+        }
+
+        &-minimum {
+            margin-top: 11px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    &__right {
+        display: block;
+        width: 209px;
+        height: 51px;
+        background: $greenGradient;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+
+        font-family: $fontFamily;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $colorWhite;
+    }
+}

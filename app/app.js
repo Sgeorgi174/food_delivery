@@ -1,22 +1,41 @@
-const closeBtn = document.getElementById("modal-close")
+// НАХОДИМ ВСЕ ЗАГОЛОВКИ ТАБОВ //
+const menuTab = document.querySelectorAll('[data-tab]')
+// НАХОДИМ ВСЕ КОНТЕНТ БОКСЫ //
+const contentBoxes = document.querySelectorAll('[data-tab-content]')
+//Находим модальное окно //
+const modalCard = document.querySelector(".modal__card")
+//находим все карточки товаров
+const productCard = document.querySelectorAll(".dishes__box")
+//находим кнопку закрытия у modalCard //
+const closeModal = document.querySelector('.modal__card-close')
 
-window.addEventListener('click', function(event){
-    if (event.target.className == "cold-dishes__box-img"){
-        const openCard = event.target.closest('.cold-dishes__box');
-        document.getElementById('my-modal').classList.add('modal__card_open')
-    }
-});
 
+menuTab.forEach(function(item){
+    item.addEventListener('click', function(){        
 
-closeBtn.addEventListener('click', function(){
-    document.getElementById('my-modal').classList.remove('modal__card_open')
-});
-
-window.addEventListener('click', function(event){
-    if (event.target.className == 'menu__link') {
-        const activeItem = event.target.closest('.menu__link');        
-        activeItem.classList.add('menu__link-active')        
-    }
+        contentBoxes.forEach(function(item){
+            item.classList.add('dishes_hidden')
+        })
+        
+        const contentBox = document.querySelector('#' + this.dataset.tab)
+        contentBox.classList.remove('dishes_hidden')
+    })
+    item.addEventListener('click', function(){
+        menuTab.forEach(function(item){
+            item.classList.remove('menu__link-active')
+        })
+        item.classList.add('menu__link-active')
+    })
 })
 
+productCard.forEach(function(item){
+    item.addEventListener('click', function(){
+        modalCard.classList.add('modal__card_open')
+        document.body.style.overflow = 'hidden'
+    })
+})
 
+closeModal.addEventListener('click', function(){
+    modalCard.classList.remove('modal__card_open')
+    document.body.style.overflow = 'auto'
+})

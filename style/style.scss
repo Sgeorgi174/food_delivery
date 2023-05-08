@@ -15,10 +15,28 @@ ul {
 }
 
 body {
-    background: linear-gradient(360deg, #211F20 0%, #44403F 100%) ;
-    min-height: 100vh;
     font-family: $fontFamily;
     color: $colorWhite;
+    overflow: auto ;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(360deg, #211F20 0%, #44403F 100%) ;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+button {
+    cursor: pointer;
 }
 
 .center {
@@ -133,6 +151,7 @@ body {
             font-size: 14px;
             line-height: 17px;
             position: relative;
+            color: $colorWhite;
 
             &::after {
                 display: block;
@@ -176,16 +195,23 @@ body {
         justify-content: space-between;
     }
 
+    &__item {
+        cursor: pointer;
+    }
+
     &__link {
         font-family: $fontFamily;
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-        color: $transparentGrey;
+        color: $colorGrey;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &-active {
-            color: $colorWhite;
+            color: $colorGreen;
             position: relative;
+            cursor: pointer;
 
             &::after {
                 display: block;
@@ -509,6 +535,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 86px;
+    background: $footerBack;
 
     &__left {
         margin-top: 26px;
@@ -551,4 +578,6 @@ body {
     }
 }
 
-@import 'product_card'
+@import 'product_card';
+@import 'cart';
+@import 'base-responsive';
