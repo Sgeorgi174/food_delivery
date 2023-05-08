@@ -201,7 +201,7 @@ body {
     }
 }
 
-.cold-dishes {
+.dishes {
     margin-top: 50px;
 
     &__title {
@@ -310,6 +310,10 @@ body {
             align-items: center;
             justify-content: space-evenly;
         }
+    }
+
+    &_hidden {
+        display: none;
     }
 }
 

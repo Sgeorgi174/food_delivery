@@ -219,10 +219,10 @@ body {
   bottom: -30px;
 }
 
-.cold-dishes {
+.dishes {
   margin-top: 50px;
 }
-.cold-dishes__title {
+.dishes__title {
   font-family: gilroy_c, sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -232,7 +232,7 @@ body {
   position: relative;
   padding-left: 19px;
 }
-.cold-dishes__title::before {
+.dishes__title::before {
   content: "";
   display: block;
   width: 4px;
@@ -241,41 +241,41 @@ body {
   left: 0;
   position: absolute;
 }
-.cold-dishes__content {
+.dishes__content {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 }
-.cold-dishes__box {
+.dishes__box {
   grid-column: span 4;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   border-radius: 10px;
 }
-.cold-dishes__box-img {
+.dishes__box-img {
   min-width: 100%;
   border-radius: 10px 10px 0 0;
 }
-.cold-dishes__box-info {
+.dishes__box-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-left: 20px;
   padding-right: 16px;
 }
-.cold-dishes__box-text {
+.dishes__box-text {
   font-family: gilroy_c, sans-serif;
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
 }
-.cold-dishes__box-weight {
+.dishes__box-weight {
   font-family: gilroy_c, sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
 }
-.cold-dishes__box-disc {
+.dishes__box-disc {
   padding-left: 20px;
   padding-right: 16px;
   margin-top: 5px;
@@ -284,7 +284,7 @@ body {
   line-height: 17px;
   color: #cfcfcf;
 }
-.cold-dishes__box-check {
+.dishes__box-check {
   margin-top: 15px;
   display: flex;
   padding-left: 20px;
@@ -293,15 +293,15 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.cold-dishes__box-price {
+.dishes__box-price {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
-.cold-dishes__box-price::after {
+.dishes__box-price::after {
   content: " ₽";
 }
-.cold-dishes__box-checkout {
+.dishes__box-checkout {
   width: 137px;
   height: 44px;
   background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
@@ -316,6 +316,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.dishes_hidden {
+  display: none;
 }
 
 .about {

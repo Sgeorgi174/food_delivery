@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./app/app.js" defer></script>
+    <script src="./app/app_2.js" defer></script>
     <title>Food_delivery</title>
 </head>
 <body>
@@ -39,9 +39,9 @@
     </header>
 
     <main class="main center">
-        <div id="my-modal" class="modal__card">
+        <div class="modal__card">
             <div class="modal__card-outline">
-                <button class="modal__card-outline-btn"><svg id="modal-close" class="modal__card-close" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="modal__card-outline-btn"><svg class="modal__card-close" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_72_2828)">
                     <path d="M20.0111 16.8379L16.5016 13.3284L20.0111 9.81893C20.8733 8.9567 20.8549 7.52675 19.9923 6.66422C19.1298 5.80168 17.6999 5.78327 16.8376 6.64549L13.3281 10.155L9.81862 6.64549C8.9564 5.78327 7.52645 5.80168 6.66391 6.66422C5.80137 7.52675 5.78296 8.9567 6.64519 9.81893L10.1547 13.3284L6.64519 16.8379C5.78296 17.7002 5.80137 19.1301 6.66391 19.9926C7.52645 20.8552 8.9564 20.8736 9.81862 20.0114L13.3281 16.5019L16.8376 20.0114C17.6998 20.8736 19.1298 20.8552 19.9923 19.9926C20.8549 19.1301 20.8733 17.7002 20.0111 16.8379Z" fill="white"/>
                     </g>
@@ -84,174 +84,1301 @@
         </div>
         <section class="menu">
             <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link">Холодные закуски</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Горячие закуски</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Мясные блюда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Супы</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Рыбные блюда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Гриль меню</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Фирменные блюда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Напитки</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-1" class="menu__link">Холодные закуски</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-2" class="menu__link">Горячие закуски</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-3" class="menu__link">Мясные блюда</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-4" class="menu__link">Супы</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-5" class="menu__link">Рыбные блюда</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-6" class="menu__link">Гриль меню</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-7" class="menu__link">Фирменные блюда</a></li>
+                <li class="menu__item"><a href="#" data-tab="tab-8" class="menu__link">Напитки</a></li>
             </ul>
         </section>
 
-        <section class="cold-dishes center">
-            <h2 class="cold-dishes__title">Холодные закуски</h2>
-            <div class="cold-dishes__content">
-                <div id="click-card" class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Индейка</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+        <section class="dishes center" data-tab-content id="tab-1">
+            <h2 class="dishes__title">Холодные закуски</h2>
+            <div class="dishes__content">
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">620</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Ягненок</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1300</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Рулетики</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">540</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Осетр</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1750</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Ягненок</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1300</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Рулетики</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">540</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Индейка</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">620</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Рулетики</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">540</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Осетр</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1750</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Ягненок</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1300</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Осетр</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">1750</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>
-                <div class="cold-dishes__box">
-                    <img class="cold-dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
-                    <div class="cold-dishes__box-info">
-                        <div class="cold-dishes__box-text">Индейка</div>
-                        <div class="cold-dishes__box-weight">Вес: 225 г</div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
                     </div>
-                    <p class="cold-dishes__box-disc">Фаршированный гречневой кашей, <br>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
                         курагой, апельсином и зеленым яблоком</p>
-                    <div class="cold-dishes__box-check">
-                        <div class="cold-dishes__box-price">620</div>
-                        <button class="cold-dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-2">
+            <h2 class="dishes__title">Горячие закуски</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-3">
+            <h2 class="dishes__title">Мясные блюда</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-4">
+            <h2 class="dishes__title">Супы</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-5">
+            <h2 class="dishes__title">Рыбные блюда</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-6">
+            <h2 class="dishes__title">Гриль меню</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-7">
+            <h2 class="dishes__title">Фирменные блюда</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>             
+            </div>
+        </section>
+        <section class="dishes dishes_hidden center" data-tab-content id="tab-8">
+            <h2 class="dishes__title">Напитки</h2>
+            <div class="dishes__content">
+                <div  class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_3.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Рулетики</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">540</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_2.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Ягненок</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1300</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_4.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Осетр</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">1750</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+                    </div>                    
+                </div>
+                <div class="dishes__box">
+                    <img class="dishes__box-img" src="./img/products/product_1.jpg" alt="dish">
+                    <div class="dishes__box-info">
+                        <div class="dishes__box-text">Индейка</div>
+                        <div class="dishes__box-weight">Вес: 225 г</div>
+                    </div>
+                    <p class="dishes__box-disc">Фаршированный гречневой кашей, <br>
+                        курагой, апельсином и зеленым яблоком</p>
+                    <div class="dishes__box-check">
+                        <div class="dishes__box-price">620</div>
+                        <button class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
                     </div>                    
                 </div>             
             </div>
