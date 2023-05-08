@@ -13,7 +13,7 @@ menuTab.forEach(function(item){
         const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('dishes_hidden')
     })
-    item.addEventListener('click' function(){})
+    // item.addEventListener('click' function(){})
 })
 
 
