@@ -39,3 +39,15 @@ closeModal.addEventListener('click', function(){
     modalCard.classList.remove('modal__card_open')
     document.body.style.overflow = 'auto'
 })
+
+
+// SWIPER //
+const swiper = new Swiper('.swiper', {
+    autoplay: {
+        disableOnInteraction: false,
+        delay: 3000
+    },
+    loop: true,
+    effect: 'fade',
+    
+})

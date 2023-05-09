@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="./app/app.js" defer></script>
     <title>Food_delivery</title>
 </head>
@@ -36,7 +38,19 @@
                     </ul>
                 </a>
             </nav>
-            <div class="header__background"><img src="./img/header_back.jpg" alt="back" class="header__background-img"></div>      
+           
+            <div class="swiper header__swiper">
+                <div class="header__swiper-heading">
+                    <h1 class="header__swiper-title header__swiper-title_shadow">Доставка ВКУСНЕЙШИХ БЛЮд за 60 минут</h1>
+                    <h1 class="header__swiper-title">Доставка ВКУСНЕЙШИХ БЛЮд за 60 минут</h1>                 
+                    <p class="header__swiper-text">Ещё не пробовал?</p>
+                </div>
+                <div class="swiper-wrapper header__swiper-wrapper">
+                    <div class="swiper-slide header__swiper-slide" style="background-image: url(./img/swiper/header_slide_1.jpg);"></div>
+                    <div class="swiper-slide header__swiper-slide" style="background-image: url(./img/swiper/header_slide_2.jpg);"></div>
+                    <div class="swiper-slide header__swiper-slide" style="background-image: url(./img/swiper/header_slide_3.jpg);"></div>
+                </div>
+            </div>      
         </header>
     
         <main class="main">
