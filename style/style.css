@@ -364,6 +364,8 @@ button {
   line-height: 27px;
 }
 .dishes__box-weight {
+  margin-top: 15px;
+  padding-left: 20px;
   font-family: gilroy_c, sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -379,7 +381,7 @@ button {
   color: #cfcfcf;
 }
 .dishes__box-check {
-  margin-top: 15px;
+  margin-top: 35px;
   display: flex;
   padding-left: 20px;
   padding-right: 16px;

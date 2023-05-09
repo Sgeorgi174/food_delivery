@@ -12,6 +12,7 @@ const closeModal = document.querySelector('.modal__card-close')
 
 
 
+
 // ТАБЫ ПУНКТОВ МЕНЮ И АКТИВНЫХ ЭЛЕМЕНТОВ МЕНЮ //
 menuTab.forEach(function(item){
     item.addEventListener('click', function(){        
