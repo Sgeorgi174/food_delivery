@@ -347,7 +347,7 @@ button {
   border-radius: 10px;
 }
 .dishes__box-img {
-  min-width: 100%;
+  width: 100%;
   border-radius: 10px 10px 0 0;
 }
 .dishes__box-info {

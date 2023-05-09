@@ -8,8 +8,11 @@ const modalCard = document.querySelector(".modal__card")
 const productCard = document.querySelectorAll(".dishes__box")
 //находим кнопку закрытия у modalCard //
 const closeModal = document.querySelector('.modal__card-close')
+//находим кнопки каунтера на странице
 
 
+
+// ТАБЫ ПУНКТОВ МЕНЮ И АКТИВНЫХ ЭЛЕМЕНТОВ МЕНЮ //
 menuTab.forEach(function(item){
     item.addEventListener('click', function(){        
 
@@ -28,11 +31,17 @@ menuTab.forEach(function(item){
     })
 })
 
+
+// ВЫЗОВ МОДАЛЬНОГО ОКНА //
 productCard.forEach(function(item){
-    item.addEventListener('click', function(){
-        modalCard.classList.add('modal__card_open')
-        document.body.style.overflow = 'hidden'
-    })
+    if (item == null) {
+        return ;
+    } else {
+        item.addEventListener('click', function(){
+            modalCard.classList.add('modal__card_open')
+            document.body.style.overflow = 'hidden'
+        })
+    }
 })
 
 closeModal.addEventListener('click', function(){
@@ -41,13 +50,20 @@ closeModal.addEventListener('click', function(){
 })
 
 
-// SWIPER //
-const swiper = new Swiper('.swiper', {
-    autoplay: {
-        disableOnInteraction: false,
-        delay: 3000
-    },
-    loop: true,
-    effect: 'fade',
-    
+//описываем каунтер в корзине //
+window.addEventListener('click', function(event){
+    if (event.target.dataset.action === 'plus') {
+       const counterCart = event.target.closest('.cart__box-counter');
+       const count = counterCart.querySelector('[data-counter]');
+       count.innerText = ++count.innerText
+    }
+    if (event.target.dataset.action === 'minus') {
+        const counterCart = event.target.closest('.cart__box-counter');
+        const count = counterCart.querySelector('[data-counter]');
+        if (count.innerText == 1) {
+         return ;
+        } else {
+         count.innerText = --count.innerText
+        }
+     }
 })
