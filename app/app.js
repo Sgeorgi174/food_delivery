@@ -52,25 +52,19 @@ closeModal.addEventListener('click', function(){
 })
 
 
-//описываем каунтер в корзине //
-window.addEventListener('click', function(event){
-    if (event.target.dataset.action === 'plus') {
-       const counterCart = event.target.closest('.cart__box-counter');
-       const count = counterCart.querySelector('[data-counter]');
-       count.innerText = ++count.innerText
-    }
-    if (event.target.dataset.action === 'minus') {
-        const counterCart = event.target.closest('.cart__box-counter');
-        const count = counterCart.querySelector('[data-counter]');
-        if (count.innerText == 1) {
-         return ;
-        } else {
-         count.innerText = --count.innerText
-        }
-     }
-})
+
 
 window.addEventListener('click', function(event){
+    // for (let i = 0; i < this.localStorage.length; i++){
+    //     let key = localStorage.key(i)
+    //     // console.log(event.target.closest('[data-id]').dataset.id);
+    //     // console.log(this.localStorage.key(key));
+    //     if (event.target.closest('[data-id]').dataset.id === this.localStorage.key(key)){
+
+    //     }
+
+    // }
+
     if (event.target.dataset.cart == 'add'){
        const box = event.target.closest('.dishes__box')
        const productInfo = {

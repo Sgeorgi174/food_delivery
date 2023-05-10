@@ -788,6 +788,36 @@ button {
   flex-direction: column;
   row-gap: 40px;
 }
+.cart__empty {
+  margin: 55px 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart__empty-title {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+.cart__empty-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+  width: 188px;
+  height: 51px;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+  font-family: gilroy_c, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
 .cart__box {
   display: flex;
   justify-content: space-between;

@@ -1,12 +1,17 @@
+//переменные для рендера корзины //
 const cartRender = document.querySelector('.cart__content')
 const removeCart = document.querySelectorAll('.cart__box-close')
+const cartEmpty = document.querySelector('.cart__empty')
 
 
 newCartRender()
+sum()
+emptyCart()
 
 function newCartRender() {
     for (let i = 0; i < localStorage.length; i++ ){
         let key = localStorage.key(i)
+        
 
         if (typeof(JSON.parse(localStorage.getItem(key)).count) === 'number') {
             const cartItemHtml = 
@@ -31,6 +36,30 @@ function newCartRender() {
     }
 }
 
+
+//описываем каунтер в корзине //
+window.addEventListener('click', function(event){
+    if (event.target.dataset.action === 'plus') {
+       const counterCart = event.target.closest('.cart__box-counter');
+       const count = counterCart.querySelector('[data-counter]');
+       count.innerText = ++count.innerText
+       sum()
+    }
+    if (event.target.dataset.action === 'minus') {
+        const counterCart = event.target.closest('.cart__box-counter');
+        const count = counterCart.querySelector('[data-counter]');
+        if (count.innerText == 1) {
+         return ;
+        } else {
+         count.innerText = --count.innerText
+         sum()
+        }
+     }
+})
+
+//очистка корзины и проверка на наличие каких-либо товаров //
+
+
 window.addEventListener('click', function(event){
     if (event.target.classList[0] === 'cart__box-close') {
         
@@ -39,10 +68,40 @@ window.addEventListener('click', function(event){
             const cartBox = event.target.closest('[data-cart]').dataset.cart
             if (this.localStorage.key(i) == cartBox){
                 this.localStorage.removeItem(key)
-                event.target.closest('.cart__box').style.display = 'none';
+                event.target.closest('.cart__box').remove();
+                emptyCart ()
+                sum()
             }
         }
 
 
     }
 })
+
+function emptyCart (){
+
+    if (cartRender.children.length <= 1) {
+        cartEmpty.style.display = 'flex'
+    } else {
+        cartEmpty.style.display = 'none'
+    }
+}
+
+// подсчет суммы товаров //
+function sum(){
+    const cartItems = document.querySelectorAll('.cart__box')
+
+    let totalPrice = 0;
+    
+
+    cartItems.forEach(function(item){
+        const amount = item.querySelector('.cart__box-counter-number')       
+        const summ = item.querySelector('.cart__box-total')
+        const currentPrice = parseInt(amount.innerText) * parseInt(summ.innerText)
+        totalPrice += currentPrice     
+    })
+
+    const totalBox = document.querySelector('.total__left-amount_sum')
+    totalBox.innerText = totalPrice
+
+}
