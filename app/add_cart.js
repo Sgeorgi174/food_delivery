@@ -21,7 +21,7 @@ function newCartRender() {
                 <div data-counter class="cart__box-counter-number">${JSON.parse(localStorage.getItem(key)).count}</div>
                 <button data-action="plus" class="cart__box-counter-item"><img style="pointer-events: none;" width="11px" height="11px" src="./img/icons/plus_icon.svg"></button>
             </div>
-            <p class="cart__box-total">1640</p>
+            <p class="cart__box-total">${JSON.parse(localStorage.getItem(key)).price}</p>
             <button class="cart__box-close"><img style="pointer-events: none;" width="11px" height="11px" src="./img/icons/plus_icon.svg"></button>
             </div>`
 
@@ -39,10 +39,10 @@ window.addEventListener('click', function(event){
             const cartBox = event.target.closest('[data-cart]').dataset.cart
             if (this.localStorage.key(i) == cartBox){
                 this.localStorage.removeItem(key)
+                event.target.closest('.cart__box').style.display = 'none';
             }
         }
 
-        location.reload();
 
     }
 })

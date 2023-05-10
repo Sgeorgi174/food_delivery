@@ -4,7 +4,7 @@
         "title": "Брускетта с хамоном и сыром",
         "weight": "Вес: 250г",
         "imgSrc": "butterbrot-ham-cheese.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 480
     },
     {
@@ -12,7 +12,7 @@
         "title": "Брускетта с хамоном",
         "weight": "Вес: 250г",
         "imgSrc": "butterbrot-ham.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 450
     },
     {
@@ -20,7 +20,7 @@
         "title": "Сырная тарелка",
         "weight": "Вес: 250г",
         "imgSrc": "chesse-plate.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 740
     },
     {
@@ -28,7 +28,7 @@
         "title": "Фруктовая тарелка",
         "weight": "Вес: 250г",
         "imgSrc": "fruit-plate.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 630
     },
     {
@@ -36,7 +36,7 @@
         "title": "Мясная тарелка",
         "weight": "Вес: 250г",
         "imgSrc": "meat-plate.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 980
     },
     {
@@ -44,7 +44,7 @@
         "title": "Мясной рулет",
         "weight": "Вес: 250г",
         "imgSrc": "meat-roll.jpg",
-        "disc": "Фаршированный гречневой кашей, <br> курагой, апельсином и зеленым яблоком",
+        "disc": "Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?",
         "price": 1350
     }
 ]
