@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 13,
         "title": "Стриплойн",
         "weight": "Вес: 250г",
         "imgSrc": "beef-steak.jpg",
@@ -8,7 +8,7 @@
         "price": 1300
     },
     {
-        "id": 2,
+        "id": 14,
         "title": "Говядина велингтон",
         "weight": "Вес: 250г",
         "imgSrc": "beef-wal.jpg",
@@ -16,7 +16,7 @@
         "price": 1800
     },
     {
-        "id": 3,
+        "id": 15,
         "title": "Цыпленок табака",
         "weight": "Вес: 250г",
         "imgSrc": "chiken-tapaka.jpg",
@@ -24,7 +24,7 @@
         "price": 960
     },
     {
-        "id": 4,
+        "id": 16,
         "title": "Куриные ножки",
         "weight": "Вес: 250г",
         "imgSrc": "foots.jpg",
@@ -32,7 +32,7 @@
         "price": 550
     },
     {
-        "id": 5,
+        "id": 17,
         "title": "Свинная корейка",
         "weight": "Вес: 250г",
         "imgSrc": "pork-steak.jpg",
@@ -40,7 +40,7 @@
         "price": 850
     },
     {
-        "id": 6,
+        "id": 18,
         "title": "Салат с курицей",
         "weight": "Вес: 250г",
         "imgSrc": "salad.jpg",

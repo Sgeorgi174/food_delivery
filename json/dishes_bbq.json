@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 31,
         "title": "Рибай",
         "weight": "Вес: 250г",
         "imgSrc": "beef-steak.jpg",
@@ -8,7 +8,7 @@
         "price": 2600
     },
     {
-        "id": 2,
+        "id": 32,
         "title": "Стейк из баранины",
         "weight": "Вес: 250г",
         "imgSrc": "lamb-steak.jpg",
@@ -16,7 +16,7 @@
         "price": 2000
     },
     {
-        "id": 3,
+        "id": 33,
         "title": "Свиной стейк",
         "weight": "Вес: 250г",
         "imgSrc": "pork-steak.jpg",
@@ -24,7 +24,7 @@
         "price": 1350
     },
     {
-        "id": 4,
+        "id": 34,
         "title": "Свиные ребра",
         "weight": "Вес: 250г",
         "imgSrc": "ribbs.jpg",
@@ -32,7 +32,7 @@
         "price": 930
     },
     {
-        "id": 5,
+        "id": 35,
         "title": "Гриль сэндвич",
         "weight": "Вес: 250г",
         "imgSrc": "sandwich.jpg",
@@ -40,7 +40,7 @@
         "price": 600
     },
     {
-        "id": 6,
+        "id": 36,
         "title": "Морепродукты",
         "weight": "Вес: 250г",
         "imgSrc": "seafood.jpg",

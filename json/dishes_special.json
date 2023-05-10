@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 37,
         "title": "Утка по-пекински",
         "weight": "Вес: 250г",
         "imgSrc": "duck.jpg",
@@ -8,7 +8,7 @@
         "price": 1800
     },
     {
-        "id": 2,
+        "id": 38,
         "title": "Курица Кунг-Пао",
         "weight": "Вес: 250г",
         "imgSrc": "kung-pao.jpg",
@@ -16,7 +16,7 @@
         "price": 260
     },
     {
-        "id": 3,
+        "id": 39,
         "title": "Баранья рулька",
         "weight": "Вес: 250г",
         "imgSrc": "lamb.jpg",
@@ -24,7 +24,7 @@
         "price": 280
     },
     {
-        "id": 4,
+        "id": 40,
         "title": "Стейк Рибай",
         "weight": "Вес: 250г",
         "imgSrc": "ribeye.jpg",
@@ -32,7 +32,7 @@
         "price": 310
     },
     {
-        "id": 5,
+        "id": 41,
         "title": "Сало охотничье",
         "weight": "Вес: 250г",
         "imgSrc": "salo.jpg",
@@ -40,7 +40,7 @@
         "price": 200
     },
     {
-        "id": 6,
+        "id": 42,
         "title": "Тунец на гриле",
         "weight": "Вес: 250г",
         "imgSrc": "tuna.jpg",

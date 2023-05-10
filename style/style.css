@@ -804,6 +804,9 @@ button {
   bottom: -20px;
   z-index: 3;
 }
+.cart__box-img {
+  max-width: 150px;
+}
 .cart__box-info {
   max-width: 265px;
 }

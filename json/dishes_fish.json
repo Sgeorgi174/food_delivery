@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 25,
         "title": "Лосось на гриле",
         "weight": "Вес: 250г",
         "imgSrc": "grill-salmon.jpg",
@@ -8,7 +8,7 @@
         "price": 1250
     },
     {
-        "id": 2,
+        "id": 26,
         "title": "Сэндвич с лососем",
         "weight": "Вес: 250г",
         "imgSrc": "salmon.jpg",
@@ -16,7 +16,7 @@
         "price": 850
     },
     {
-        "id": 3,
+        "id": 27,
         "title": "Сашими",
         "weight": "Вес: 250г",
         "imgSrc": "sashimi.jpg",
@@ -24,7 +24,7 @@
         "price": 1100
     },
     {
-        "id": 4,
+        "id": 28,
         "title": "Скумбрия",
         "weight": "Вес: 250г",
         "imgSrc": "scumbria.jpg",
@@ -32,7 +32,7 @@
         "price": 780
     },
     {
-        "id": 5,
+        "id": 29,
         "title": "Сельдь",
         "weight": "Вес: 250г",
         "imgSrc": "seld.jpg",
@@ -40,7 +40,7 @@
         "price": 630
     },
     {
-        "id": 6,
+        "id": 30,
         "title": "Креветки",
         "weight": "Вес: 250г",
         "imgSrc": "shrimps.jpg",

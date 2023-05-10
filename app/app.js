@@ -8,8 +8,9 @@ const modalCard = document.querySelector(".modal__card")
 const productCard = document.querySelectorAll(".dishes__box")
 //находим кнопку закрытия у modalCard //
 const closeModal = document.querySelector('.modal__card-close')
-//находим кнопки каунтера на странице
-
+//находим кнопки корзины на странице //
+const cartButton = document.querySelector('.dishes__box-check')
+//находим верстку корзины //
 
 
 
@@ -67,4 +68,20 @@ window.addEventListener('click', function(event){
          count.innerText = --count.innerText
         }
      }
+})
+
+window.addEventListener('click', function(event){
+    if (event.target.dataset.cart == 'add'){
+       const box = event.target.closest('.dishes__box')
+       const productInfo = {
+        title: box.querySelector('.dishes__box-text').innerText,
+        count: 1,
+        price: box.querySelector('.dishes__box-price').innerText,
+        id: box.dataset.id,
+        img: box.querySelector('.dishes__box-img').getAttribute('src'),
+        disc: box.querySelector('.dishes__box-disc').innerText
+       }
+       this.localStorage.setItem(productInfo.id, JSON.stringify(productInfo));
+
+    }
 })

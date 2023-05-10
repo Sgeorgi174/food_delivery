@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 19,
         "title": "Корейский суп",
         "weight": "Вес: 250г",
         "imgSrc": "asian-soup.jpg",
@@ -8,7 +8,7 @@
         "price": 1800
     },
     {
-        "id": 2,
+        "id": 20,
         "title": "Борщ",
         "weight": "Вес: 250г",
         "imgSrc": "borsch.jpg",
@@ -16,7 +16,7 @@
         "price": 260
     },
     {
-        "id": 3,
+        "id": 21,
         "title": "Грибной крем суп",
         "weight": "Вес: 250г",
         "imgSrc": "mashrooms-soup.jpg",
@@ -24,7 +24,7 @@
         "price": 280
     },
     {
-        "id": 4,
+        "id": 22,
         "title": "Лагман",
         "weight": "Вес: 250г",
         "imgSrc": "meat-soup.jpg",
@@ -32,7 +32,7 @@
         "price": 310
     },
     {
-        "id": 5,
+        "id": 23,
         "title": "Окрошка",
         "weight": "Вес: 250г",
         "imgSrc": "okroshka.jpg",
@@ -40,7 +40,7 @@
         "price": 200
     },
     {
-        "id": 6,
+        "id": 24,
         "title": "Сливочная уха",
         "weight": "Вес: 250г",
         "imgSrc": "salmon-soup.jpg",
