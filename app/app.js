@@ -10,7 +10,6 @@ const productCard = document.querySelectorAll(".dishes__box")
 const closeModal = document.querySelector('.modal__card-close')
 //находим кнопки корзины на странице //
 const cartButton = document.querySelector('.dishes__box-check')
-//находим верстку корзины //
 
 
 
@@ -55,17 +54,14 @@ closeModal.addEventListener('click', function(){
 
 
 window.addEventListener('click', function(event){
-    // for (let i = 0; i < this.localStorage.length; i++){
-    //     let key = localStorage.key(i)
-    //     // console.log(event.target.closest('[data-id]').dataset.id);
-    //     // console.log(this.localStorage.key(key));
-    //     if (event.target.closest('[data-id]').dataset.id === this.localStorage.key(key)){
-
-    //     }
-
-    // }
 
     if (event.target.dataset.cart == 'add'){
+
+        const addCartBtn = event.target.querySelector('#icon_cart')
+        const addOkBtn = event.target.querySelector('#icon_ok')
+        addCartBtn.classList.add('dishes__box-btn_hide')
+        addOkBtn.classList.remove('dishes__box-btn_hide')
+
        const box = event.target.closest('.dishes__box')
        const productInfo = {
         title: box.querySelector('.dishes__box-text').innerText,
@@ -74,8 +70,10 @@ window.addEventListener('click', function(event){
         id: box.dataset.id,
         img: box.querySelector('.dishes__box-img').getAttribute('src'),
         disc: box.querySelector('.dishes__box-disc').innerText
-       }
-       this.localStorage.setItem(productInfo.id, JSON.stringify(productInfo));
 
+       }
+       this.localStorage.setItem(productInfo.id, JSON.stringify(productInfo));       
     }
 })
+
+

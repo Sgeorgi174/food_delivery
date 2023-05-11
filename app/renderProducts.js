@@ -56,7 +56,10 @@ function renderProductsCold(productsArrayCold){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerCold.insertAdjacentHTML('beforeend', productHTML)
@@ -75,7 +78,10 @@ function renderProductsHot(productsArrayHot){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerHot.insertAdjacentHTML('beforeend', productHTML)
@@ -94,7 +100,10 @@ function renderProductsMeat(productsArrayMeat){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerMeat.insertAdjacentHTML('beforeend', productHTML)
@@ -113,7 +122,10 @@ function renderProductsSoup(productsArraySoup){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerSoup.insertAdjacentHTML('beforeend', productHTML)
@@ -132,7 +144,10 @@ function renderProductsFish(productsArrayFish){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerFish.insertAdjacentHTML('beforeend', productHTML)
@@ -151,7 +166,10 @@ function renderProductsBbq(productsArrayBbq){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerBbq.insertAdjacentHTML('beforeend', productHTML)
@@ -170,7 +188,10 @@ function renderProductsSpecial(productsArraySpecial){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+            <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+            <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+        </button>
         </div>                    
     </div>`;
     productContainerSpecial.insertAdjacentHTML('beforeend', productHTML)
@@ -189,7 +210,10 @@ function renderProductsDrinks(productsArrayDrinks){
         <div class="dishes__box-weight">${item.weight}</div>
         <div class="dishes__box-check">
             <div class="dishes__box-price">${item.price}</div>
-            <button data-cart="add" class="dishes__box-checkout">В корзину<img src="./img/icons/cart_icon.svg"> </button>
+            <button data-cart="add" class="dishes__box-checkout">В корзину
+                <img id="icon_cart" class="dishes__box-btn" style="pointer-events: none;" src="./img/icons/cart_icon.svg">
+                <img id="icon_ok" class="dishes__box-btn dishes__box-btn_hide" width="40px" height="40px" style="pointer-events: none;" src="./img/icons/ok_icon.svg">
+            </button>
         </div>                    
     </div>`;
     productContainerDrinks.insertAdjacentHTML('beforeend', productHTML)

@@ -240,6 +240,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: box-shadow 0.3s;
+}
+.nav__cart:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.nav__cart:active {
+  position: relative;
+  top: 1px;
 }
 .nav__cart-text {
   font-family: gilroy_c, sans-serif;
@@ -265,15 +273,6 @@ button {
   line-height: 17px;
   color: #403C3B;
 }
-.nav__cart-wrapper {
-  width: 24px;
-  height: 24px;
-  border-radius: 15px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .menu {
   margin-top: 29px;
@@ -295,7 +294,14 @@ button {
   line-height: 21px;
   color: #cfcfcf;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s;
+}
+.menu__link:hover {
+  color: #A6A7AB;
+}
+.menu__link:active {
+  position: relative;
+  top: 1px;
 }
 .menu__link-active {
   color: #618967;
@@ -412,6 +418,20 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transition: box-shadow 0.3s;
+}
+.dishes__box-checkout:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.dishes__box-checkout:active {
+  position: relative;
+  top: 1px;
+}
+.dishes__box-btn {
+  display: flex;
+}
+.dishes__box-btn_hide {
+  display: none;
 }
 .dishes_hidden {
   display: none;
@@ -444,6 +464,10 @@ button {
   line-height: 25px;
 }
 .about__content-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 60px;
   width: 223px;
   height: 59px;
@@ -455,6 +479,14 @@ button {
   font-size: 13px;
   line-height: 16px;
   color: #fff;
+  transition: background 0.3s;
+}
+.about__content-btn:hover {
+  background: #504B4A;
+}
+.about__content-btn:active {
+  position: relative;
+  top: 1px;
 }
 .about__content-right {
   margin-top: 71px;
@@ -565,6 +597,14 @@ button {
   font-size: 13px;
   line-height: 16px;
   color: #fff;
+  transition: box-shadow 0.3s;
+}
+.contacts__booking:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.contacts__booking:active {
+  position: relative;
+  top: 1px;
 }
 .contacts__socials {
   margin-top: 30px;
@@ -817,6 +857,14 @@ button {
   font-size: 14px;
   line-height: 17px;
   color: #fff;
+  transition: box-shadow 0.3s;
+}
+.cart__empty-btn:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.cart__empty-btn:active {
+  position: relative;
+  top: 1px;
 }
 .cart__box {
   display: flex;
@@ -842,12 +890,12 @@ button {
 }
 .cart__box-title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
 }
 .cart__box-text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #A6A7AB;
 }
@@ -867,6 +915,14 @@ button {
   border: none;
   background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
   border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+.cart__box-counter-item:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.cart__box-counter-item:active {
+  position: relative;
+  top: 1px;
 }
 .cart__box-counter-number {
   font-weight: 700;
@@ -877,6 +933,10 @@ button {
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
+  min-width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cart__box-total::after {
   content: " ₽";
@@ -892,16 +952,38 @@ button {
   background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
   border-radius: 15px;
   transform: rotate(45deg);
+  transition: box-shadow 0.3s;
+}
+.cart__box-close:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.cart__box-close:active {
+  position: relative;
+  top: 1px;
 }
 
 .additional {
   margin-top: 40px;
 }
 .additional__title {
-  margin-left: 158px;
+  margin-top: 20px;
+  font-family: gilroy_c, sans-serif;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  padding-left: 19px;
+}
+.additional__title::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: #618967;
+  left: 0;
+  position: absolute;
 }
 .additional__content {
   margin-top: 30px;
@@ -1000,7 +1082,7 @@ button {
 .total__left-delivery {
   margin-top: 5px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
 }
 .total__left-delivery_sum {
@@ -1013,7 +1095,7 @@ button {
 .total__left-minimum {
   margin-top: 11px;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
 }
 .total__right {
@@ -1029,6 +1111,14 @@ button {
   font-size: 14px;
   line-height: 17px;
   color: #fff;
+  transition: box-shadow 0.3s;
+}
+.total__right:hover {
+  box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+}
+.total__right:active {
+  position: relative;
+  top: 1px;
 }
 
 @media (max-width: 1300px) {

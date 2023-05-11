@@ -224,6 +224,14 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        transition: box-shadow .3s;
+        &:hover {
+            box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
 
         &-text {
             font-family: $fontFamily;
@@ -251,16 +259,6 @@ button {
             line-height: 17px;
             color: $colorDarkGrey;
         }
-
-        &-wrapper {
-            width: 24px;
-            height: 24px;
-            border-radius: 15px;
-            background-color: $colorWhite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
     }
 }
 
@@ -286,7 +284,14 @@ button {
         line-height: 21px;
         color: $colorGrey;
         cursor: pointer;
-        transition: all 0.3s ease-in-out;
+        transition: color 0.3s;
+        &:hover {
+            color: $colorTextGrey;
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
 
         &-active {
             color: $colorGreen;
@@ -417,6 +422,22 @@ button {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            transition: box-shadow .3s;
+            &:hover {
+                box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+            }
+            &:active {
+                position:relative;
+                top:1px;
+            }
+        }
+
+        &-btn {
+            display: flex;
+
+            &_hide {
+                display: none;
+            }
         }
     }
 
@@ -455,6 +476,10 @@ button {
         }
 
         &-btn {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 60px;
             width: 223px;
             height: 59px;
@@ -467,6 +492,14 @@ button {
             font-size: 13px;
             line-height: 16px;
             color: $colorWhite;
+            transition: background 0.3s;
+            &:hover {
+                background: $colorLightGray;
+            }
+            &:active {
+                position:relative;
+                top:1px;
+            }
         }
 
         &-right {
@@ -593,6 +626,14 @@ button {
         font-size: 13px;
         line-height: 16px;
         color: $colorWhite;
+        transition: box-shadow .3s;
+        &:hover {
+            box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
     }
 
     &__socials {

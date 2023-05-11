@@ -81,6 +81,14 @@
             font-size: 14px;
             line-height: 17px;
             color: $colorWhite;
+            transition: box-shadow .3s;
+            &:hover {
+                box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+            }
+            &:active {
+                position:relative;
+                top:1px;
+            }
         }
     }
 
@@ -112,13 +120,13 @@
 
         &-title {
             font-weight: 700;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 21px;
         }
 
         &-text {
             font-weight: 400;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 14px;
             color: $colorTextGrey;
         }
@@ -138,6 +146,14 @@
                 border: none;
                 background: $greenGradient;
                 border-radius: 15px;
+                transition: box-shadow .3s;
+                &:hover {
+                    box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+                }
+                &:active {
+                    position:relative;
+                    top:1px;
+                }
 
             }
 
@@ -152,6 +168,10 @@
             font-weight: 700;
             font-size: 20px;
             line-height: 25px;
+            min-width: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &::after {
                 content: ' \20BD';
             }
@@ -168,6 +188,14 @@
             background: $greenGradient;
             border-radius: 15px;
             transform: rotate(45deg);
+            transition: box-shadow .3s;
+            &:hover {
+                box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+            }
+            &:active {
+                position:relative;
+                top:1px;
+            }
         }
 
         
@@ -180,10 +208,25 @@
 
 
     &__title {
-        margin-left: 158px;
+        margin-top: 20px;
+        // margin-left: 158px;
+        font-family: $fontFamily;
         font-weight: 700;
-        font-size: 25px;
-        line-height: 30px;
+        font-size: 32px;
+        line-height: 39px;
+        text-transform: uppercase;
+        color: $colorWhite;
+        position: relative;
+        padding-left: 19px;
+        &::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-color: $colorGreen;
+            left: 0;
+            position: absolute;
+        }
     }
 
     &__content {
@@ -297,7 +340,7 @@
         &-delivery {
             margin-top: 5px;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 14px;
 
             &_sum {
@@ -312,7 +355,7 @@
         &-minimum {
             margin-top: 11px;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 14px;
         }
     }
@@ -331,5 +374,13 @@
         font-size: 14px;
         line-height: 17px;
         color: $colorWhite;
+        transition: box-shadow .3s;
+        &:hover {
+            box-shadow: -1px 1px 8px 5px rgba(103, 154, 111, 0.37);
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
     }
 }
