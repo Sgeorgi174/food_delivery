@@ -177,6 +177,9 @@ button {
                 line-height: 21px;
                 color: $colorGrey;
             }
+            &:focus {
+                border-radius: 10px 10px 0px 0px;
+            }
         }
     }
 
@@ -701,6 +704,36 @@ button {
     }
 }
 
+.suggestions-suggestions {
+    color: $colorWhite;
+    background: $colorLightGray;
+    border: 0;
+    padding: 15px 48px;
+    border-radius: 0px 0px 10px 10px ;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.suggestions-suggestions strong {
+    font-weight: 400;
+    color: $colorGreen;
+}
+
+.suggestions-suggestion:hover {
+    background: transparent;
+    color: $colorGreen;
+}
+
+.suggestions-selected {
+    background: transparent;
+    color: $colorGreen;
+}
+
+.suggestions-selected:hover {
+    background: transparent;
+    color: $colorGreen;
+}
 @import 'product_card';
 @import 'cart';
 @import 'base-responsive';

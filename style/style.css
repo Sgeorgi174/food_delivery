@@ -75,6 +75,22 @@
     opacity: 0;
   }
 }
+@keyframes formOpen {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes formOpenReverse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -242,6 +258,9 @@ button {
   font-size: 18px;
   line-height: 21px;
   color: #cfcfcf;
+}
+.nav__search-input:focus {
+  border-radius: 10px 10px 0px 0px;
 }
 .nav__contacts {
   display: flex;
@@ -697,6 +716,37 @@ button {
   color: #fff;
 }
 
+.suggestions-suggestions {
+  color: #fff;
+  background: #504B4A;
+  border: 0;
+  padding: 15px 48px;
+  border-radius: 0px 0px 10px 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.suggestions-suggestions strong {
+  font-weight: 400;
+  color: #618967;
+}
+
+.suggestions-suggestion:hover {
+  background: transparent;
+  color: #618967;
+}
+
+.suggestions-selected {
+  background: transparent;
+  color: #618967;
+}
+
+.suggestions-selected:hover {
+  background: transparent;
+  color: #618967;
+}
+
 .modal__card {
   position: fixed;
   left: 0;
@@ -848,7 +898,7 @@ button {
 }
 .cart__checkout-section {
   margin: 0 auto;
-  margin-top: 71px;
+  margin-top: 20px;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   border-radius: 10px;
   max-width: 800px;
@@ -959,6 +1009,12 @@ button {
   flex-wrap: wrap;
   gap: 15px;
 }
+.cart__checkout-forms_anim {
+  animation: formOpen 0.5s ease 0s 1 normal forwards;
+}
+.cart__checkout-forms_anim-reverse {
+  animation: formOpenReverse 0.5s ease 0s 1 normal forwards;
+}
 .cart__checkout-forms-btn {
   display: flex;
   flex-direction: column;
@@ -977,6 +1033,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0;
 }
 .cart__checkout-forms-radio-dot_active::before {
   display: block;
@@ -1268,7 +1325,7 @@ button {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(33, 31, 32, 0.6);
+  background: rgba(33, 31, 32, 0.9);
 }
 .modal-wrapper {
   position: absolute;
@@ -1276,11 +1333,13 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 11px 12px 28px 4px rgba(86, 211, 103, 0.27);
+  border-radius: 15px;
 }
 .modal-box {
   width: 45vw;
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   padding: 30px 0;
+  border-radius: 15px;
 }
 .modal-box-heading {
   margin: 20px auto;
@@ -1320,7 +1379,7 @@ button {
   line-height: 22px;
 }
 .modal-box__content-box {
-  margin-top: 30px;
+  margin-top: 20px;
   display: grid;
   -moz-column-gap: 45px;
        column-gap: 45px;

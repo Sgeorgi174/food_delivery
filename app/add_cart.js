@@ -8,6 +8,7 @@ const checkoutBtn = document.querySelector('.total__right')
 const cartReturn = document.querySelector('#cart__return')
 // переменные для ренедера финальной модалки
 const modalContent = document.querySelector('.modal-box__wrapper')
+const modalWrapper = document.querySelector('.modal') 
 
 
 newCartRender()
@@ -198,7 +199,6 @@ window.addEventListener('click', function(item){
 
 
     if (item.target == checkoutBtn){
-        renderModal()
         cartList.classList.add('cart__list_anim')
         sleep(500).then(() => { cartList.style.display = 'none'; });
         sleep(501).then(() => { cartCheckout.style.display = 'block'; });
@@ -220,6 +220,7 @@ window.addEventListener('click', function(item){
         deliveryBtn.classList.add('cart__checkout-button_active')
         pickupBtn.classList.remove('cart__checkout-button_active')
         deliveryForm.style.display = 'flex'
+        deliveryForm.classList.add('cart__checkout-forms_anim')
     }
 
     if (item.target == pickupBtn) {
@@ -247,6 +248,7 @@ window.addEventListener('click', function(item){
         cashBtn.classList.add('cart__checkout-button_active')
         cardBtn.classList.remove('cart__checkout-button_active')
         changeForm.style.display = 'flex'
+        changeForm.classList.add('cart__checkout-forms_anim')
     }
 
     if (item.target == nowBtn) {
@@ -259,6 +261,7 @@ window.addEventListener('click', function(item){
         nowBtn.classList.remove('cart__checkout-button_active')
         timeBtn.classList.add('cart__checkout-button_active')
         timeForm.style.display = 'flex'
+        timeForm.classList.add('cart__checkout-forms_anim')
     }
 
     if (item.target == callBtn) {
@@ -272,12 +275,16 @@ window.addEventListener('click', function(item){
     }
 
     if (item.target == newOrder) {
-        finalModal.style.display = 'block'
+        finalModal.style.display = 'block';
+        modalWrapper.style.overflow = 'auto';
+        document.body.style.overflow = 'hidden'
+        renderModal()
         modalSum()
     }
 
-    if (item.target == goHome) {
+    if (item.target == goHome) {        
         finalModal.style.display = 'none'
+        document.body.style.overflow = 'auto'
         this.localStorage.clear()
     }
 

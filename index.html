@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <script src="./app/renderProducts.js" defer></script>
@@ -19,7 +20,7 @@
                 <a href="./index.html" class="nav__logo"><img src="./img/icons/LOGO.svg" alt="logo" class="nav__logo-img"></a>
                 <div class="nav__search">
                     <img src="./img/icons/Location_icon.svg" alt="" class="nav__search-point">
-                    <input type="text" placeholder="Введите адрес доставки" class="nav__search-input">
+                    <input id="address" type="address" placeholder="Введите адрес доставки" class="nav__search-input">
                     <img src="./img/icons/Search_icon.svg" alt="" class="nav__search-search">
                 </div>
                 <div class="nav__contacts">
@@ -274,6 +275,8 @@
         </footer>
     </div>
     
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+    <script src="./app/suggestions.js"></script> 
 </body>
 </html>
