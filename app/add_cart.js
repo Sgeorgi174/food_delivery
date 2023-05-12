@@ -8,7 +8,7 @@ const checkoutBtn = document.querySelector('.total__right')
 const cartReturn = document.querySelector('#cart__return')
 // переменные для ренедера финальной модалки
 const modalContent = document.querySelector('.modal-box__wrapper')
-const modalWrapper = document.querySelector('.modal') 
+const modalWrapper = document.querySelector('.modal')
 
 
 newCartRender()
