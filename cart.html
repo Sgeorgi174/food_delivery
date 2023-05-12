@@ -40,119 +40,130 @@
         </header>
     
         <main class="main">
-
-            <div class="modal__card">
-                <div class="modal__card-outline">
-                    <button class="modal__card-outline-btn"><svg class="modal__card-close" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_72_2828)">
-                        <path d="M20.0111 16.8379L16.5016 13.3284L20.0111 9.81893C20.8733 8.9567 20.8549 7.52675 19.9923 6.66422C19.1298 5.80168 17.6999 5.78327 16.8376 6.64549L13.3281 10.155L9.81862 6.64549C8.9564 5.78327 7.52645 5.80168 6.66391 6.66422C5.80137 7.52675 5.78296 8.9567 6.64519 9.81893L10.1547 13.3284L6.64519 16.8379C5.78296 17.7002 5.80137 19.1301 6.66391 19.9926C7.52645 20.8552 8.9564 20.8736 9.81862 20.0114L13.3281 16.5019L16.8376 20.0114C17.6998 20.8736 19.1298 20.8552 19.9923 19.9926C20.8549 19.1301 20.8733 17.7002 20.0111 16.8379Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_72_2828">
-                        <rect width="18.8492" height="18.8492" fill="white" transform="translate(13.3281) rotate(45)"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
-                        </button>
-                    <div class="modal__card-box">
-                        <img src="./img/product__modal.jpg" class="modal__card-img">
-                        <div class="modal__card-info">
-                            <h3 class="modal__card-title">Ягненок</h3>
-                            <p class="modal__card-text">помидор, сыр фета, масло подсолнечное, капуста пекинская, 
-                                перец сладкий красный, огурцы, оливки без косточек</p>
-                            <p class="modal__card-weight">Вес: 210 г</p>
-                            <div class="modal__card-check">
-                                <button class="modal__card-btn">В корзину</button>
-                                <p class="modal__card-price">259</p>
-                            </div>
-                            <div class="modal__card-nutrients">
-                                <p class="modal__card-nutrient">Белки</p>
-                                <p class="modal__card-nutrient">Жиры</p>
-                                <p class="modal__card-nutrient">Жиры</p>
-                                <p class="modal__card-nutrient">Ккал</p>
-                                <p class="modal__card-nutrient">Вес</p>
-                            </div>
-                            <div class="modal__card-values">
-                                <p class="modal__card-quantity">17.23</p>
-                                <p class="modal__card-quantity">7.63</p>
-                                <p class="modal__card-quantity">22.35</p>
-                                <p class="modal__card-quantity">234</p>
-                                <p class="modal__card-quantity">210 г</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <section class="cart center">
-                <a href="./index.html#menu" class="cart__nav">к выбору блюда</a>
-                <h2 class="cart__title">КОРЗИНА</h2>
-                <div class="cart__content">
-                    <div class="cart__empty">
-                        <img src="./img/icons/empty_cart.svg" class="cart__empty-img">
-                        <div class="cart__empty-title">КОРЗИНА ПУСТАЯ</div>
-                        <a href="./index.html#menu" class="cart__empty-btn">Посмотреть меню</a>
+                <div class="cart__list">
+                    <a href="./index.html#menu" class="cart__nav">к выбору блюда</a>
+                    <h2 class="cart__title">КОРЗИНА</h2>
+                    <div class="cart__content">
+                        <div class="cart__empty">
+                            <img src="./img/icons/empty_cart.svg" class="cart__empty-img">
+                            <div class="cart__empty-title">КОРЗИНА ПУСТАЯ</div>
+                            <a href="./index.html#menu" class="cart__empty-btn">Посмотреть меню</a>
+                        </div>
                     </div>
-
+                    <div class="total center">
+                        <div class="total__box">
+                            <div class="total__left">
+                                <div class="total__left-amount">Итого:<span class="total__left-amount_sum">500</span></div>
+                                <div class="total__left-delivery">До бесплатной доставки не хватет:<span class="total__left-delivery_sum">100</span></div>
+                                <p class="total__left-minimum">Минимальная сума заказа 1500 ₽</p>
+                            </div>
+                            <button class="total__right">Оформить заказ</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="cart__checkout">
+                    <a id="cart__return" href="#" class="cart__nav">в корзину</a>
+                    <h2 class="cart__title">Оформление заказа</h2>
+                    <div class="cart__checkout-section">
+                        <div class="cart__checkout-title">1. Контактная информация</div>
+                        <div id="form-name" class="cart__checkout-forms">
+                            <input type="text" placeholder="Имя*" class="cart__checkout-form cart__checkout-form_name">
+                            <input type="tel" placeholder="Телефон*" class="cart__checkout-form cart__checkout-form_tel">
+                        </div>
+                    </div>
+                    <div class="cart__checkout-section">
+                        <div class="cart__checkout-title">2. Доставка</div>
+                        <div class="cart__checkout-buttons cart__checkout-buttons-delivery">
+                            <a class="cart__checkout-button cart__checkout-button-delivery cart__checkout-button_active">Доставка</a>
+                            <a class="cart__checkout-button cart__checkout-button-pickup">Самовывоз</a>
+                        </div>
+                        <div id="form-delivery" class="cart__checkout-forms">
+                            <input type="text" placeholder="Укажите улицу*" class="cart__checkout-form cart__checkout-form_street">
+                            <input type="number" placeholder="Номер дома*" class="cart__checkout-form cart__checkout-form_house">
+                            <input type="text" placeholder="№ квартиры/офиса" class="cart__checkout-form cart__checkout-form_room">
+                            <input type="number" placeholder="Подъезд" class="cart__checkout-form cart__checkout-form_entrance">
+                            <input type="number" placeholder="Этаж" class="cart__checkout-form cart__checkout-form_floor">
+                            <input type="text" placeholder="Комментарий" class="cart__checkout-form cart__checkout-form_comment">
+                        </div>
+                    </div>
+                    <div class="cart__checkout-section">
+                        <div class="cart__checkout-title">3. Оплатить</div>
+                        <div class="cart__checkout-buttons cart__checkout-buttons-pay">
+                            <a class="cart__checkout-button cart__checkout-button-online cart__checkout-button_active">Оплата онлайн</a>
+                            <a class="cart__checkout-button cart__checkout-button-card">Курьеру картой</a>
+                            <a class="cart__checkout-button cart__checkout-button-cash">Наличными</a>
+                        </div>
+                        <div style="display: none;" id="form-change" class="cart__checkout-forms">
+                            <input type="number" placeholder="Сдача с" class="cart__checkout-form cart__checkout-form_change">
+                        </div>
+                    </div>
+                    <div class="cart__checkout-section">
+                        <div class="cart__checkout-title">4. Когда доставить</div>
+                        <div class="cart__checkout-row">
+                            <div class="cart__checkout-buttons cart__checkout-buttons-where">
+                                <a class="cart__checkout-button cart__checkout-button-now cart__checkout-button_active">В ближайшее время</a>
+                                <a class="cart__checkout-button cart__checkout-button-time">Ко времени</a>
+                            </div>
+                            <input style="display: none;" id="form-time" type="text" placeholder="Укажите время" class="cart__checkout-form cart__checkout-form_time">
+                        </div>
+                        <div class="cart__checkout-person">                            
+                            <div class="cart__box-counter">
+                                <div class="cart__checkout-person-text">Кол-во персон</div>
+                                <button data-action="minus" class="cart__box-counter-item"><img style="pointer-events: none;" width="12px" height="3px" src="./img/icons/minus_icon.svg"></button>
+                                <div data-counter class="cart__box-counter-number">1</div>
+                                <button data-action="plus" class="cart__box-counter-item"><img style="pointer-events: none;" width="11px" height="11px" src="./img/icons/plus_icon.svg"></button>
+                            </div>
+                            <div class="cart__checkout-forms cart__checkout-forms-btn">
+                                <div class="cart__checkout-forms-radio">
+                                    <div id="no-call" class="cart__checkout-forms-radio-dot"></div>
+                                    <div class="cart__checkout-forms-radio-text">Не перезванивать</div>
+                                </div>
+                                <div class="cart__checkout-forms-radio">
+                                    <div id="call" class="cart__checkout-forms-radio-dot cart__checkout-forms-radio-dot_active"></div>
+                                    <div class="cart__checkout-forms-radio-text">Потребуется звонок оператора</div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="cart__checkout-section cart__checkout-section-complete">
+                        <button class="cart__checkout-button cart__checkout-button-complete">Оформить заказ</button>
+                    </div>
+                </div>
+            
+
             </section>
+            <div id="modal" style="display: none;" class="modal">
+                <div class="modal-wrapper">
+                    <div class="modal-box">
+                        <h2 class="modal-box-heading">Спасибо за заказ!</h2>
+                        <div class="modal-box__content">
+                            <div class="modal-box__content-title">Инфорамация о заказе:</div>
+                            <div class="modal-box__wrapper">
+                                <div class="modal-box__content-box">
+                                    <div class="modal-box__content-item">Название</div>
+                                    <div class="modal-box__content-item">Кол-во</div>
+                                    <div class="modal-box__content-item">Цена</div>
+                                    <div class="modal-box__content-item">Сумма</div>
+                                </div>
+                                <div class="modal-box__content-box">
+                                    <div class="modal-box__content-item modal-box__content-item_name">Брускетта с хамоном</div>
+                                    <div class="modal-box__content-item modal-box__content-item_count">1</div>
+                                    <div class="modal-box__content-item modal-box__content-item_price">450</div>
+                                    <div class="modal-box__content-item modal-box__content-item_total">450</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-box__total">
+                            <div class="modal-box__total-price">Итого: 450</div>
+                            <a href="./index.html" class="modal-box__total-home">Вернуться на главную</a>
 
-            <section class="total center">
-                <div class="total__box">
-                    <div class="total__left">
-                        <div class="total__left-amount">Итого:<span class="total__left-amount_sum">500</span></div>
-                        <div class="total__left-delivery">До бесплатной доставки не хватет:<span class="total__left-delivery_sum">100</span></div>
-                        <p class="total__left-minimum">Минимальная сума заказа 1500 ₽</p>
-                    </div>
-                    <button class="total__right">Оформить заказ</button>
-                </div>
-            </section>
+                        </div>
 
-            <!-- <section class="additional center">
-                <h3 class="additional__title">ДОБАВИТЬ К ЗАКАЗУ</h3>
-                <div class="cart__content additional__content">
-                    <div class="additional__box">
-                        <img width="209px" height="123px" src="./img/product__modal.jpg" class="additional__box-img">
-                        <h4 class="additional__box-title">КВАС АНАНАСОВЫЙ</h4>
-                        <div class="additional__box-add">
-                            <p class="additional__box-text">Добавить</p>
-                            <button class="additional__box-btn"><img width="8px" height="8px" src="./img/icons/plus_icon.svg"></button>                            
-                        </div>
-                        <p class="additional__box-total">1640</p>
-                    </div>
-                    <div class="additional__box">
-                        <img width="209px" height="123px" src="./img/product__modal.jpg" class="additional__box-img">
-                        <h4 class="additional__box-title">КВАС АНАНАСОВЫЙ</h4>
-                        <div class="additional__box-add">
-                            <p class="additional__box-text">Добавить</p>
-                            <button class="additional__box-btn"><img width="8px" height="8px" src="./img/icons/plus_icon.svg"></button>                            
-                        </div>
-                        <p class="additional__box-total">1640</p>
-                    </div>
-                    <div class="additional__box">
-                        <img width="209px" height="123px" src="./img/product__modal.jpg" class="additional__box-img">
-                        <h4 class="additional__box-title">КВАС АНАНАСОВЫЙ</h4>
-                        <div class="additional__box-add">
-                            <p class="additional__box-text">Добавить</p>
-                            <button class="additional__box-btn"><img width="8px" height="8px" src="./img/icons/plus_icon.svg"></button>                            
-                        </div>
-                        <p class="additional__box-total">1640</p>
-                    </div>
-                    <div class="additional__box">
-                        <img width="209px" height="123px" src="./img/product__modal.jpg" class="additional__box-img">
-                        <h4 class="additional__box-title">КВАС АНАНАСОВЫЙ</h4>
-                        <div class="additional__box-add">
-                            <p class="additional__box-text">Добавить</p>
-                            <button class="additional__box-btn"><img width="8px" height="8px" src="./img/icons/plus_icon.svg"></button>                            
-                        </div>
-                        <p class="additional__box-total">1640</p>
                     </div>
                 </div>
-            </section> -->
 
-
-          
+            </div>          
         </main>
     
         <footer class="footer center">
@@ -174,7 +185,6 @@
             </div>
         </footer>
     </div>
-    <div>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eos, assumenda?</div>
     
 </body>
 </html>

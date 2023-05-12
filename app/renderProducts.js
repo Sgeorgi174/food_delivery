@@ -11,7 +11,9 @@ getProducts()
 
 async function getProducts() {
     const responseCold = await fetch('./json/dishes_cold.json');
+    console.log(responseCold);
     const productsArrayCold = await responseCold.json();
+    console.log(productsArrayCold);
     renderProductsCold(productsArrayCold)
 
     const responseHot = await fetch('./json/dishes_hot.json');

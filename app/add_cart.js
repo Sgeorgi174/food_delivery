@@ -2,11 +2,55 @@
 const cartRender = document.querySelector('.cart__content')
 const removeCart = document.querySelectorAll('.cart__box-close')
 const cartEmpty = document.querySelector('.cart__empty')
+// кнопка оформить заказ //
+const checkoutBtn = document.querySelector('.total__right')
+//кнопка обратно в корзину с формы офрмления заказа //
+const cartReturn = document.querySelector('#cart__return')
+// переменные для ренедера финальной модалки
+const modalContent = document.querySelector('.modal-box__wrapper')
 
 
 newCartRender()
 sum()
 emptyCart()
+
+
+function renderModal(){
+    const cartGoods = document.querySelectorAll('.cart__box')
+    cartGoods.forEach(function (item) {
+        const newProducts = {
+            title: item.querySelector('.cart__box-title').innerText,
+            count: item.querySelector('.cart__box-counter-number').innerText,
+            price: item.querySelector('.cart__box-total').innerText
+        }
+        const modalBoxContent = 
+        `                            
+        <div class="modal-box__content-box">
+            <div class="modal-box__content-item modal-box__content-item_name">${newProducts.title}</div>
+            <div class="modal-box__content-item modal-box__content-item_count">${newProducts.count}</div>
+            <div class="modal-box__content-item modal-box__content-item_price">${newProducts.price}</div>
+            <div class="modal-box__content-item modal-box__content-item_total">${newProducts.count * newProducts.price}</div>
+        </div>
+        `
+
+        modalContent.insertAdjacentHTML('beforeend', modalBoxContent)
+    })
+}
+
+function modalSum(){
+    let res = 0
+    const allTotal = document.querySelectorAll('.modal-box__content-item_total')
+    allTotal.forEach(function(item){
+        res += parseInt(item.innerText)
+    })
+    document.querySelector('.modal-box__total-price').innerText = `Итого: ${res}`
+}
+
+
+//функция паузы //
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 //функция для рендера корзины //
 function newCartRender() {
     for (let i = 0; i < localStorage.length; i++ ){
@@ -35,6 +79,10 @@ function newCartRender() {
         
     }
 }
+
+
+
+
 
 
 //описываем работу каунтера в корзине //
@@ -115,4 +163,126 @@ function sum(){
 
 }
 
-// вычисление бесплатной доставки //
+
+
+// описываем офомрление заказа //
+
+
+window.addEventListener('click', function(item){
+    // кнопки и поля для анимации офрмления заказа
+    const cartList = this.document.querySelector('.cart__list')
+    const cartCheckout = this.document.querySelector('.cart__checkout')
+    // переменные для работы форм при оформлении заказа //
+    // секция доставки //
+    const deliveryBtn = this.document.querySelector('.cart__checkout-button-delivery')
+    const pickupBtn = this.document.querySelector('.cart__checkout-button-pickup')
+    const deliveryForm = this.document.querySelector('#form-delivery')
+    // секция оплаты //
+    const onlineBtn = this.document.querySelector('.cart__checkout-button-online')
+    const cardBtn = this.document.querySelector('.cart__checkout-button-card')
+    const cashBtn = this.document.querySelector('.cart__checkout-button-cash')
+    const changeForm = this.document.querySelector('#form-change')
+    // секция когда доставить //
+    const nowBtn = this.document.querySelector('.cart__checkout-button-now')
+    const timeBtn = this.document.querySelector('.cart__checkout-button-time')
+    const timeForm = this.document.querySelector('#form-time')
+    // радио кнопки в форме оформления //
+    const callBtn = this.document.querySelector('#call')
+    const NoCallBtn = this.document.querySelector('#no-call')
+    // кнопка оформить заказ в форме оформления заказа //
+    const newOrder = this.document.querySelector('.cart__checkout-button-complete')
+    // находим id модального окна //
+    const finalModal = this.document.querySelector('#modal')
+    // находим кнопку НА ГЛАВНУЮ в модальном окне //
+    const goHome = this.document.querySelector('.modal-box__total-home')
+
+
+    if (item.target == checkoutBtn){
+        renderModal()
+        cartList.classList.add('cart__list_anim')
+        sleep(500).then(() => { cartList.style.display = 'none'; });
+        sleep(501).then(() => { cartCheckout.style.display = 'block'; });
+        cartCheckout.classList.add('cart__checkout_anim')
+    }
+
+    if (item.target == cartReturn) {
+        cartCheckout.classList.remove('cart__checkout_anim')
+        cartList.classList.remove('cart__list_anim')
+        cartCheckout.classList.add('cart__checkout_anim-reverse')
+        sleep(500).then(() => { cartCheckout.style.display = 'none'; });
+        sleep(501).then(() => { cartList.style.display = 'block'; });
+        cartList.classList.add('cart__list_anim-reverse')
+        sleep(1000).then(() => {  cartCheckout.classList.remove('cart__checkout_anim-reverse') });
+        sleep(1000).then(() => { cartList.classList.remove('cart__list_anim-reverse') });     
+    }
+
+    if (item.target == deliveryBtn) {
+        deliveryBtn.classList.add('cart__checkout-button_active')
+        pickupBtn.classList.remove('cart__checkout-button_active')
+        deliveryForm.style.display = 'flex'
+    }
+
+    if (item.target == pickupBtn) {
+        deliveryBtn.classList.remove('cart__checkout-button_active')
+        pickupBtn.classList.add('cart__checkout-button_active')
+        deliveryForm.style.display = 'none'
+    }
+
+    if (item.target == onlineBtn) {
+        onlineBtn.classList.add('cart__checkout-button_active')
+        cashBtn.classList.remove('cart__checkout-button_active')
+        cardBtn.classList.remove('cart__checkout-button_active')
+        changeForm.style.display = 'none'
+    }
+
+    if (item.target == cardBtn) {
+        onlineBtn.classList.remove('cart__checkout-button_active')
+        cashBtn.classList.remove('cart__checkout-button_active')
+        cardBtn.classList.add('cart__checkout-button_active')
+        changeForm.style.display = 'none'
+    }
+
+    if (item.target == cashBtn) {
+        onlineBtn.classList.remove('cart__checkout-button_active')
+        cashBtn.classList.add('cart__checkout-button_active')
+        cardBtn.classList.remove('cart__checkout-button_active')
+        changeForm.style.display = 'flex'
+    }
+
+    if (item.target == nowBtn) {
+        nowBtn.classList.add('cart__checkout-button_active')
+        timeBtn.classList.remove('cart__checkout-button_active')
+        timeForm.style.display = 'none'
+    }
+
+    if (item.target == timeBtn) {
+        nowBtn.classList.remove('cart__checkout-button_active')
+        timeBtn.classList.add('cart__checkout-button_active')
+        timeForm.style.display = 'flex'
+    }
+
+    if (item.target == callBtn) {
+        callBtn.classList.add('cart__checkout-forms-radio-dot_active')
+        NoCallBtn.classList.remove('cart__checkout-forms-radio-dot_active')
+    }
+
+    if (item.target == NoCallBtn) {
+        callBtn.classList.remove('cart__checkout-forms-radio-dot_active')
+        NoCallBtn.classList.add('cart__checkout-forms-radio-dot_active')
+    }
+
+    if (item.target == newOrder) {
+        finalModal.style.display = 'block'
+        modalSum()
+    }
+
+    if (item.target == goHome) {
+        finalModal.style.display = 'none'
+        this.localStorage.clear()
+    }
+
+    
+})
+
+
+

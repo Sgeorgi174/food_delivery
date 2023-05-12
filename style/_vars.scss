@@ -54,3 +54,51 @@ $tranparentBlack: linear-gradient(360deg, #211F20 0%, #44403F 100%);
 $footerBack: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
 
 $fontFamily: gilroy_c, sans-serif;
+
+@keyframes slideCart {
+	0% {
+		transform: translateX(0);
+        opacity: 1;
+	}
+
+	100% {
+		transform: translateX(-1600px);
+        opacity: 0;
+	}
+}
+
+@keyframes slideCartReverse {
+	0% {
+		transform: translateX(-1600px);
+        opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+}
+
+@keyframes slideCheckout {
+	0% {
+		transform: translateX(1600px);
+        opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+}
+
+@keyframes slideCheckoutReverse {
+	0% {
+		transform: translateX(0px);
+        opacity: 1;
+	}
+
+	100% {
+		transform: translateX(1600px);
+        opacity: 0;
+	}
+}
